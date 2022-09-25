@@ -1,0 +1,23 @@
+<div class="container my-5">
+    <div class="row justify-content-center">
+        <div class="col-md-4">
+            <a class="btn btn-warning btn-sm" href="/student">Back</a>
+            <br>
+            <br>
+            <div class="card shadow">
+                <div class="card-body">
+                    <div id="single" class="my-3">
+                        <label for="">Photo</label>
+                        <img src="/images/studentPhoto/<%= student.photo %> " alt="">
+                    </div>
+                    <div class="my-3 text-center">
+                        <p>Name : <%= student.name %> </p>
+                        <p>Email : <%= student.email %> </p>
+                        <p>Cell : <%= student.cell %> </p>
+                        <p>Location : <%= student.location %> </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

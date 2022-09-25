@@ -1,0 +1,48 @@
+
+<div class="container my-5">
+    <div class="row justify-content-center">
+        <div class="col-md-10">
+            <a class="btn btn-primary btn-sm" href="/student/create">Add NewStudent</a>
+            <a class="btn btn-warning btn-sm" href="/student">VerifyStudent_table</a>
+            <br>
+            <br>
+            <div class="card shadow">
+                <div class="card-body">
+                    <h2>unverifyStudent_table</h2>
+                    <hr>
+                    <table class="table striped unverifyStudent_table">
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>Name</th>
+                                <th>Email</th>
+                                <th>Cell</th>
+                                <th>Verify</th>
+                                <th>Location</th>
+                                <th>Photo</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <% allStudents.reverse().forEach((student, index) => { %>
+                                <tr class="align-middle">
+                                    <td><%= index + 1 %> </td>
+                                    <td><%= student.name %> </td>
+                                    <td><%= student.email %> </td>
+                                    <td><%= student.cell %> </td>
+                                    <td><a class="btn btn-sm btn-warning" href="/student/phone/<%= student.id %> ">Verify by phone</a></td>
+                                    <td><%= student.location %> </td>
+                                    <td><img src="/images/studentPhoto/<%= student.photo %> " alt=""></td>
+                                    <td>
+                                        <a class="btn btn-warning btn-sm" href="/student/edit/<%= student.id %>"><i class="fas fa-edit"></i></a>
+                                        <a class="btn btn-danger btn-sm delete_btn" href="/student/delete/<%= student.id %>"><i class="fas fa-trash"></i></a>
+                                    </td>
+                                </tr>
+                            <% }) %>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

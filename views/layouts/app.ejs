@@ -1,0 +1,70 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student-Database</title>
+    <!-- font-awesome_cdn_link -->
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"/>
+    <!-- data-table-cnd-link -->
+    <link rel="stylesheet" href="//cdn.datatables.net/1.12.1/css/jquery.dataTables.min.css">
+    <!-- bootstrap-cdn-link -->
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css">
+    <!-- custom-css -->
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    
+
+
+    <%- body %> 
+
+
+
+
+    <!-- jquery-cdn-link -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <!-- data-table-cdn-link -->
+    <script src="//cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
+    <!-- bootstrap-cdn-link -->
+    <script src="	https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+
+        // MakeDataTable
+        $('.unverifyStudent_table').DataTable();
+
+
+        // Student Preview Images Show.
+        const student_photo_field = document.querySelector('#student_photo_field');
+        const preview_img = document.querySelector('#preview_img');
+
+        if(student_photo_field ){
+            student_photo_field.onchange = (e) => {
+            const imgurl = URL.createObjectURL(e.target.files[0]);
+            preview_img.setAttribute('src', imgurl);
+            };
+        };
+
+
+        // Delete btn Manage.
+        const delete_btn = document.querySelectorAll('.delete_btn');
+
+        if(delete_btn){
+            delete_btn.forEach( item => {
+            item.onclick = (e) => {
+                const confirmationAlert = confirm('Are you sure ?');
+
+                if(confirmationAlert){
+                        return true;
+                    }else{
+                        return false;
+                    };
+                };
+            });
+        };
+
+    </script>
+</body>
+</html>

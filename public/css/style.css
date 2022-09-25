@@ -1,0 +1,41 @@
+.unverifyStudent_table tr img {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+
+#photo_icom{
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    cursor: pointer;
+}
+
+
+#student_photo_field{
+    display: none;
+}
+
+
+#preview_img{
+    max-width: 100%;
+}
+
+#single img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+
+.verify_student_info {
+    text-align: center;
+}
+
+.verify_student_info img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 50%;
+}
