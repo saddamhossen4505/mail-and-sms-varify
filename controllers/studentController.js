@@ -234,8 +234,8 @@ const verifyOtpByPhone = (req, res) => {
     // Get allData.
     const allStudents = JSON.parse(readFileSync(path.join(__dirname, '../db/student.json')));
 
-    // Get Otp.
-    const otp = req.params.otp;
+    const otp = req.body.otp;
+
 
     // match otp.
     if( req.body.otp == otp ){

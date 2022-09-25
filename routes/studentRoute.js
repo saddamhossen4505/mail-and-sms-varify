@@ -36,7 +36,7 @@ router.get('/edit/:id', editStudentData );
 router.post('/update/:id', studentPhotoMulter, updateStudentData );
 router.get('/delete/:id', deleteStudentData );
 router.get('/phone/:id', verifyByPhone);
-router.post('/phone/:otp', verifyOtpByPhone);
+router.post('/phone/:id', verifyOtpByPhone);
 
 
 

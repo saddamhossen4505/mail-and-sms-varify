@@ -16,7 +16,7 @@
                         <p>Cell : <%= student.cell %> </p>
                         <p>Location : <%= student.location %> </p>
                     </div>
-                    <form action="/student/phone/${otp}" method="post">
+                    <form action="/student/phone/<%= student.id %> " method="post">
                         <div class="my-3">
                             <label for="">Input here code</label>
                             <input name="otp" type="text" class="form-control">
